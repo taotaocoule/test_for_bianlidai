@@ -7,10 +7,9 @@
 </head>
 <body>
     <h1>hello world</h1>
-    <button>share in wechat</button>
+    <button onclick="share">share in wechat</button>
     <script>
-        var btn=document.getElementsByTagName('button');
-        btn.onclick(
+        function share(){
             wx.onMenuShareTimeLine({
                 title:"Hello world,it's a try",
                 link:"http://www.baidu.com",
@@ -22,7 +21,8 @@
                     alert("It's cancelled");
                 }
             });
-        );
+            
+        }
     </script>
 </body>
 </html>
